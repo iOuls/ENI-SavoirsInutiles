@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M02TP01 - Gestion des savoirs inutiles</title>
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+        }
+
+        .box {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        h1,
+        button,
+        label,
+        ol {
+            color: rgb(11, 58, 42);
+            border-radius: 3px;
+            padding: 10px;
+            background-color: rgba(0, 139, 139, 0.459);
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, .15);
+            text-align: center;
+        }
+
+        label, ol {
+            background-color: unset;
+            box-shadow: unset;
+            text-align: left;
+        }
+
+        ol{
+            margin-top: 2.5em;
+        }
+
+        button {
+            border-style: none;
+            padding: .75em 5em;
+            margin-top: .65em;
+        }
+
+        body {
+            font-family: serif;
+            font-size: 12px;
+        }
+
+        img {
+            width: 14em;
+            margin: 3em;
+            border-radius: 5px;
+        }
+
+        .infos{
+            font-size: 1em;
+            padding : 0;
+            margin-bottom: 0;
+        }
+
+        .infos-savoir{
+            font-size: 2em;
+            margin-left: 2vh;
+            padding : 0;
+            margin-bottom: 0;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h1>M02TP01
+        <br>Whats yours useless knowledges
+    </h1>
+    <div class="container">
+        <img src="https://media.sudouest.fr/13298067/1200x-1/einstein-langue-1600-1600.jpg?v=1670579321" alt="Einstein">
+
+        <div class="container">
+            <div class="box">
+                <p class="container-tab">
+                    <label for="savoir">Useless knowledge : </label>
+                    <input name="savoir" id="savoir" type="text">
+                </p>
+
+                <p class="container-tab">
+                    <label for="auteur">Writer : </label>
+                    <input name="auteur" id="auteur" type="text">
+                </p>
+
+                <p class="container-tab">
+                    <label for="date">Date : </label>
+                    <input name="date" id="date" type="date">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-tab">
+        <br>
+        <button class="box" onclick="ajouter()">Ajouter</button>
+        <br>
+        <button class="box" onclick="trieAlpha()">Ordre alphabétique</button>
+        <br>
+        <button class="box" onclick="trieChrono()">Ordre chronologique</button>
+    </div>
+
+    <ol id="liste">
+
+    </ol>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
